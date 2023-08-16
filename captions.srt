@@ -1,0 +1,1739 @@
+1
+00:00:03,780 --> 00:00:08,880
+if a 60% free throw shooter takes 10
+
+2
+00:00:06,540 --> 00:00:10,860
+shots what is the probability that it
+
+3
+00:00:08,880 --> 00:00:12,719
+makes exactly seven of them
+
+4
+00:00:10,860 --> 00:00:14,160
+to answer questions like that we can use
+
+5
+00:00:12,719 --> 00:00:16,680
+this formula for the binomial
+
+6
+00:00:14,160 --> 00:00:18,600
+distribution and this doesn't just apply
+
+7
+00:00:16,680 --> 00:00:20,520
+to free throws it applies whenever
+
+8
+00:00:18,600 --> 00:00:21,840
+there's a repeating process where you
+
+9
+00:00:20,520 --> 00:00:23,880
+could put the outcomes into two
+
+10
+00:00:21,840 --> 00:00:26,100
+categories that's where the buy and
+
+11
+00:00:23,880 --> 00:00:27,960
+binomial comes from and that kind of
+
+12
+00:00:26,100 --> 00:00:29,880
+situation is pretty common considering
+
+13
+00:00:27,960 --> 00:00:32,579
+it encompasses all yes or no questions
+
+14
+00:00:29,880 --> 00:00:34,200
+the formula looks a bit scary but by the
+
+15
+00:00:32,579 --> 00:00:37,300
+end of this video we'll make sense of it
+
+16
+00:00:34,200 --> 00:00:41,290
+and hopefully it's pretty along the way
+
+17
+00:00:37,300 --> 00:00:41,290
+[Music]
+
+18
+00:00:42,059 --> 00:00:45,899
+okay we're going to start with one blob
+
+19
+00:00:43,739 --> 00:00:47,820
+it's programmed to make it 60 of the
+
+20
+00:00:45,899 --> 00:00:50,280
+time so what's the probability that it
+
+21
+00:00:47,820 --> 00:00:52,260
+would make one out of one this question
+
+22
+00:00:50,280 --> 00:00:53,940
+feels a little bit silly we don't need
+
+23
+00:00:52,260 --> 00:00:55,980
+any fancy formulas to know that the
+
+24
+00:00:53,940 --> 00:00:58,379
+answer is sixty percent but it's a
+
+25
+00:00:55,980 --> 00:01:00,059
+starting point to build on another silly
+
+26
+00:00:58,379 --> 00:01:02,640
+starting question is what's the
+
+27
+00:01:00,059 --> 00:01:04,260
+probability it makes zero of one it's
+
+28
+00:01:02,640 --> 00:01:07,020
+the other forty percent of the time
+
+29
+00:01:04,260 --> 00:01:08,640
+sixty percent is the same as three out
+
+30
+00:01:07,020 --> 00:01:10,560
+of five so we can visualize the
+
+31
+00:01:08,640 --> 00:01:12,240
+probabilities by looking at five blobs
+
+32
+00:01:10,560 --> 00:01:13,979
+and having three of them make it and two
+
+33
+00:01:12,240 --> 00:01:16,080
+of them Miss
+
+34
+00:01:13,979 --> 00:01:18,240
+okay now what if the blobs take two
+
+35
+00:01:16,080 --> 00:01:20,100
+shots each it'll be helpful to have more
+
+36
+00:01:18,240 --> 00:01:21,840
+blobs to look at here so let's make this
+
+37
+00:01:20,100 --> 00:01:23,820
+into a square of blobs and have the new
+
+38
+00:01:21,840 --> 00:01:25,920
+blobs also take their first shot again
+
+39
+00:01:23,820 --> 00:01:27,659
+with three out of five of them making it
+
+40
+00:01:25,920 --> 00:01:29,340
+and then they can all take a second shot
+
+41
+00:01:27,659 --> 00:01:32,759
+which means we now have to ask about
+
+42
+00:01:29,340 --> 00:01:34,860
+making zero one or two of two shots you
+
+43
+00:01:32,759 --> 00:01:36,479
+might notice this isn't exactly random
+
+44
+00:01:34,860 --> 00:01:38,460
+but for the moment we're just focusing
+
+45
+00:01:36,479 --> 00:01:40,920
+on making a clean diagram
+
+46
+00:01:38,460 --> 00:01:42,540
+four of the 25 blobs were unlucky enough
+
+47
+00:01:40,920 --> 00:01:45,240
+to miss both the first and the second
+
+48
+00:01:42,540 --> 00:01:46,920
+shot from this we can say that a sixty
+
+49
+00:01:45,240 --> 00:01:49,680
+percent free throw shooter has a 16
+
+50
+00:01:46,920 --> 00:01:51,240
+probability of missing both shots and
+
+51
+00:01:49,680 --> 00:01:52,920
+this is the same number we would have
+
+52
+00:01:51,240 --> 00:01:55,619
+gotten by multiplying the probabilities
+
+53
+00:01:52,920 --> 00:01:57,420
+of the individual shot outcomes the
+
+54
+00:01:55,619 --> 00:02:00,360
+probability of missing the first shot is
+
+55
+00:01:57,420 --> 00:02:02,460
+40 then 40 percent of those forty
+
+56
+00:02:00,360 --> 00:02:04,140
+percent also missed the second shot and
+
+57
+00:02:02,460 --> 00:02:06,840
+forty percent of forty percent comes out
+
+58
+00:02:04,140 --> 00:02:08,580
+to sixteen percent next for the blobs
+
+59
+00:02:06,840 --> 00:02:10,920
+that made one shot we have two groups
+
+60
+00:02:08,580 --> 00:02:13,500
+one group of six made the first and
+
+61
+00:02:10,920 --> 00:02:16,440
+missed the second shot and six out of 25
+
+62
+00:02:13,500 --> 00:02:18,060
+is 24 again we can multiply the
+
+63
+00:02:16,440 --> 00:02:20,580
+individual probabilities to check that
+
+64
+00:02:18,060 --> 00:02:22,260
+they come out the same and indeed sixty
+
+65
+00:02:20,580 --> 00:02:24,180
+percent for the make times forty percent
+
+66
+00:02:22,260 --> 00:02:26,580
+for the Miss comes out to twenty four
+
+67
+00:02:24,180 --> 00:02:28,620
+percent the second group is pretty much
+
+68
+00:02:26,580 --> 00:02:30,300
+the same except the make and the Miss
+
+69
+00:02:28,620 --> 00:02:32,640
+come in the opposite order
+
+70
+00:02:30,300 --> 00:02:35,580
+and adding these together we get a 48
+
+71
+00:02:32,640 --> 00:02:37,379
+probability for making one or two shots
+
+72
+00:02:35,580 --> 00:02:39,300
+and for the ones that made both shots
+
+73
+00:02:37,379 --> 00:02:41,519
+there's again just one group and we can
+
+74
+00:02:39,300 --> 00:02:43,700
+fill in the numbers in the same way and
+
+75
+00:02:41,519 --> 00:02:46,440
+all these probabilities add up to 100
+
+76
+00:02:43,700 --> 00:02:48,420
+which is a great sign
+
+77
+00:02:46,440 --> 00:02:50,640
+we're gonna add a third shot in a moment
+
+78
+00:02:48,420 --> 00:02:53,160
+here but it might already be possible to
+
+79
+00:02:50,640 --> 00:02:54,480
+guess at the pattern so try pausing and
+
+80
+00:02:53,160 --> 00:02:56,940
+see if you can predict what it's going
+
+81
+00:02:54,480 --> 00:02:59,280
+to look like after three shots
+
+82
+00:02:56,940 --> 00:03:01,200
+okay for the third shot it'll be useful
+
+83
+00:02:59,280 --> 00:03:03,540
+to have even more blobs to look at so
+
+84
+00:03:01,200 --> 00:03:07,040
+let's make this a 3D grid and have the
+
+85
+00:03:03,540 --> 00:03:07,040
+new blobs take their first two shots
+
+86
+00:03:09,750 --> 00:03:12,780
+[Music]
+
+87
+00:03:10,920 --> 00:03:15,180
+with three shots the top three layers
+
+88
+00:03:12,780 --> 00:03:16,860
+made it and the bottom two layers missed
+
+89
+00:03:15,180 --> 00:03:18,480
+it's a little bit difficult to see
+
+90
+00:03:16,860 --> 00:03:20,159
+what's going on inside this Cube so
+
+91
+00:03:18,480 --> 00:03:22,800
+let's pull it apart into sections and
+
+92
+00:03:20,159 --> 00:03:24,659
+organize it by outcome okay so again
+
+93
+00:03:22,800 --> 00:03:27,780
+there's only one way to miss all of the
+
+94
+00:03:24,659 --> 00:03:29,220
+shots eight of the 125 blobs ended up in
+
+95
+00:03:27,780 --> 00:03:31,319
+this category which gives us a
+
+96
+00:03:29,220 --> 00:03:33,599
+probability of 6.4 percent for that
+
+97
+00:03:31,319 --> 00:03:35,220
+outcome and again we could get this same
+
+98
+00:03:33,599 --> 00:03:37,379
+number by multiplying the probabilities
+
+99
+00:03:35,220 --> 00:03:39,720
+of the individual misses
+
+100
+00:03:37,379 --> 00:03:41,940
+next for one make out of three shots
+
+101
+00:03:39,720 --> 00:03:44,519
+there are three ways to get it the first
+
+102
+00:03:41,940 --> 00:03:47,700
+way in this list is Miss Miss then make
+
+103
+00:03:44,519 --> 00:03:50,420
+12 of the 125 blobs had this outcome
+
+104
+00:03:47,700 --> 00:03:52,560
+which gives us a 9.6 probability
+
+105
+00:03:50,420 --> 00:03:53,819
+multiplying the individual probabilities
+
+106
+00:03:52,560 --> 00:03:55,739
+looks like this
+
+107
+00:03:53,819 --> 00:03:57,060
+the thing to notice here is that all
+
+108
+00:03:55,739 --> 00:03:59,040
+three of these groups have the same
+
+109
+00:03:57,060 --> 00:04:01,319
+number of blobs in them the probability
+
+110
+00:03:59,040 --> 00:04:03,000
+is the same for each of them we don't
+
+111
+00:04:01,319 --> 00:04:04,799
+care about the order of makes and misses
+
+112
+00:04:03,000 --> 00:04:06,959
+we just care about how many there are
+
+113
+00:04:04,799 --> 00:04:08,819
+and Order also doesn't matter for
+
+114
+00:04:06,959 --> 00:04:11,580
+multiplication so each of these comes
+
+115
+00:04:08,819 --> 00:04:13,260
+out to the same 9.6 percent which means
+
+116
+00:04:11,580 --> 00:04:15,299
+we don't have to go through all the
+
+117
+00:04:13,260 --> 00:04:16,919
+different ways of making one of three we
+
+118
+00:04:15,299 --> 00:04:18,780
+can just calculate the probability for
+
+119
+00:04:16,919 --> 00:04:20,820
+one of them then multiply that result by
+
+120
+00:04:18,780 --> 00:04:23,040
+3 to get the overall probability of
+
+121
+00:04:20,820 --> 00:04:24,840
+making one out of three shots
+
+122
+00:04:23,040 --> 00:04:26,880
+and this idea will come in handy for
+
+123
+00:04:24,840 --> 00:04:28,740
+looking at two out of three just like
+
+124
+00:04:26,880 --> 00:04:30,660
+before there are three groups and they
+
+125
+00:04:28,740 --> 00:04:33,000
+each have the same probability which is
+
+126
+00:04:30,660 --> 00:04:35,520
+14.4 percent each for an overall
+
+127
+00:04:33,000 --> 00:04:37,620
+probability of 43.2 percent to make two
+
+128
+00:04:35,520 --> 00:04:39,660
+out of three and four three out of three
+
+129
+00:04:37,620 --> 00:04:42,120
+there's just one way with a probability
+
+130
+00:04:39,660 --> 00:04:44,400
+of 21.6 percent
+
+131
+00:04:42,120 --> 00:04:46,199
+so we have this pattern of counting the
+
+132
+00:04:44,400 --> 00:04:47,639
+number of specific ways to make a
+
+133
+00:04:46,199 --> 00:04:49,740
+certain number of shots and then
+
+134
+00:04:47,639 --> 00:04:51,840
+multiplying that by the probability for
+
+135
+00:04:49,740 --> 00:04:54,240
+each of those specific ways which again
+
+136
+00:04:51,840 --> 00:04:56,520
+are always the same and that's exactly
+
+137
+00:04:54,240 --> 00:04:58,380
+what this formula does this bit here
+
+138
+00:04:56,520 --> 00:05:00,540
+stands for the number of ways to get K
+
+139
+00:04:58,380 --> 00:05:03,300
+makes out of n total shots it's called
+
+140
+00:05:00,540 --> 00:05:04,680
+the binomial coefficient in this example
+
+141
+00:05:03,300 --> 00:05:07,020
+we just went through the binomial
+
+142
+00:05:04,680 --> 00:05:08,699
+coefficient is one three three or one
+
+143
+00:05:07,020 --> 00:05:10,740
+depending how many makes we're asking
+
+144
+00:05:08,699 --> 00:05:12,419
+about we don't yet have a great way of
+
+145
+00:05:10,740 --> 00:05:14,220
+finding it for other numbers of attempts
+
+146
+00:05:12,419 --> 00:05:16,380
+and makes so most of the rest of this
+
+147
+00:05:14,220 --> 00:05:17,699
+video is going to focus on that and the
+
+148
+00:05:16,380 --> 00:05:19,620
+second part is multiplying the
+
+149
+00:05:17,699 --> 00:05:22,500
+probabilities of the individual shots
+
+150
+00:05:19,620 --> 00:05:26,039
+this little p is the probability of a
+
+151
+00:05:22,500 --> 00:05:28,139
+success so 60 in this case and one minus
+
+152
+00:05:26,039 --> 00:05:31,320
+the little p is the probability of a
+
+153
+00:05:28,139 --> 00:05:33,000
+failure so forty percent and if we write
+
+154
+00:05:31,320 --> 00:05:34,620
+these calculations so far using
+
+155
+00:05:33,000 --> 00:05:37,440
+exponents you can start to see how they
+
+156
+00:05:34,620 --> 00:05:40,199
+have the same shape as the formula so
+
+157
+00:05:37,440 --> 00:05:41,940
+this formula has a lot of pieces and a
+
+158
+00:05:40,199 --> 00:05:43,259
+lot of letters so depending how much
+
+159
+00:05:41,940 --> 00:05:44,820
+practice you've had with algebra
+
+160
+00:05:43,259 --> 00:05:46,979
+recently it might feel a bit
+
+161
+00:05:44,820 --> 00:05:49,199
+overwhelming if so I can guarantee
+
+162
+00:05:46,979 --> 00:05:51,060
+you're not alone and it might be a good
+
+163
+00:05:49,199 --> 00:05:52,620
+exercise to pause take out a piece of
+
+164
+00:05:51,060 --> 00:05:54,900
+paper and plug the numbers into the
+
+165
+00:05:52,620 --> 00:05:56,820
+formula for each case yourself
+
+166
+00:05:54,900 --> 00:05:58,860
+now all the math nerds out there are
+
+167
+00:05:56,820 --> 00:06:00,419
+going to yell at me with good reason if
+
+168
+00:05:58,860 --> 00:06:02,400
+I don't mention that this formula only
+
+169
+00:06:00,419 --> 00:06:04,680
+makes sense if the shots are independent
+
+170
+00:06:02,400 --> 00:06:07,080
+of each other which might not be true
+
+171
+00:06:04,680 --> 00:06:08,460
+for example missing the first shot might
+
+172
+00:06:07,080 --> 00:06:09,900
+make you nervous changing the
+
+173
+00:06:08,460 --> 00:06:12,900
+probability of making the next shot
+
+174
+00:06:09,900 --> 00:06:14,100
+making things way more complicated for
+
+175
+00:06:12,900 --> 00:06:15,600
+the rest of this video though we're
+
+176
+00:06:14,100 --> 00:06:17,460
+going to assume that the interactions
+
+177
+00:06:15,600 --> 00:06:19,740
+between shots are minor enough that we
+
+178
+00:06:17,460 --> 00:06:21,660
+can ignore them and these blobs don't
+
+179
+00:06:19,740 --> 00:06:24,120
+even have the memory of a goldfish so
+
+180
+00:06:21,660 --> 00:06:25,800
+every shot is a fresh start that might
+
+181
+00:06:24,120 --> 00:06:27,660
+sound lazy but even if you care about
+
+182
+00:06:25,800 --> 00:06:29,699
+making the most accurate model possible
+
+183
+00:06:27,660 --> 00:06:31,800
+it's usually good to start with a
+
+184
+00:06:29,699 --> 00:06:34,139
+simpler model then test it to see how it
+
+185
+00:06:31,800 --> 00:06:35,160
+performs then add complexity if you need
+
+186
+00:06:34,139 --> 00:06:36,840
+to
+
+187
+00:06:35,160 --> 00:06:38,580
+alright so now we have the overall
+
+188
+00:06:36,840 --> 00:06:39,900
+structure of the formula figured out but
+
+189
+00:06:38,580 --> 00:06:41,819
+we're not quite ready to answer that
+
+190
+00:06:39,900 --> 00:06:42,960
+original question about making seven of
+
+191
+00:06:41,819 --> 00:06:45,000
+ten shots
+
+192
+00:06:42,960 --> 00:06:46,800
+we can plug in the numbers but it's not
+
+193
+00:06:45,000 --> 00:06:48,240
+clear just yet how we count how many
+
+194
+00:06:46,800 --> 00:06:50,520
+different ways there are to arrange
+
+195
+00:06:48,240 --> 00:06:52,380
+seven makes and three misses
+
+196
+00:06:50,520 --> 00:06:54,240
+okay let's start fresh forgetting about
+
+197
+00:06:52,380 --> 00:06:55,979
+the probabilities and just focus on
+
+198
+00:06:54,240 --> 00:06:57,900
+Counting the ways each number of shots
+
+199
+00:06:55,979 --> 00:07:00,300
+could be made which again is called the
+
+200
+00:06:57,900 --> 00:07:02,039
+binomial coefficient starting with a
+
+201
+00:07:00,300 --> 00:07:04,560
+blob that hasn't taken any shots yet
+
+202
+00:07:02,039 --> 00:07:06,780
+there's only one possibility where it's
+
+203
+00:07:04,560 --> 00:07:08,400
+made zero shots when the blob takes a
+
+204
+00:07:06,780 --> 00:07:10,740
+shot there are two possible branches
+
+205
+00:07:08,400 --> 00:07:13,080
+reality can take one where the shot goes
+
+206
+00:07:10,740 --> 00:07:14,880
+in and one where the shot misses and
+
+207
+00:07:13,080 --> 00:07:16,560
+this is true every time we add a shot
+
+208
+00:07:14,880 --> 00:07:18,000
+for the second shot these two
+
+209
+00:07:16,560 --> 00:07:20,400
+possibilities split into four
+
+210
+00:07:18,000 --> 00:07:22,500
+possibilities one possible way of
+
+211
+00:07:20,400 --> 00:07:24,479
+missing both shots two possible ways of
+
+212
+00:07:22,500 --> 00:07:26,759
+making one of the two and one way of
+
+213
+00:07:24,479 --> 00:07:29,280
+making both so just like before we have
+
+214
+00:07:26,759 --> 00:07:31,319
+this one two one pattern after two shots
+
+215
+00:07:29,280 --> 00:07:33,120
+the neat thing about this table is that
+
+216
+00:07:31,319 --> 00:07:35,280
+both ways to make one out of two shots
+
+217
+00:07:33,120 --> 00:07:36,900
+are tracked together the tree of blobs
+
+218
+00:07:35,280 --> 00:07:38,699
+over on the right tracks every single
+
+219
+00:07:36,900 --> 00:07:40,259
+possible order of makes and misses but
+
+220
+00:07:38,699 --> 00:07:41,880
+the number of blobs we have to draw is
+
+221
+00:07:40,259 --> 00:07:43,919
+going to double every time we add a shot
+
+222
+00:07:41,880 --> 00:07:45,780
+since we only care about the total
+
+223
+00:07:43,919 --> 00:07:47,340
+number of makes lumping them together in
+
+224
+00:07:45,780 --> 00:07:48,720
+a table is good enough and it makes the
+
+225
+00:07:47,340 --> 00:07:50,880
+tracking a lot easier
+
+226
+00:07:48,720 --> 00:07:53,039
+and adding a third shot we get the same
+
+227
+00:07:50,880 --> 00:07:55,259
+pattern we found before with one three
+
+228
+00:07:53,039 --> 00:07:57,419
+three and one ways to get each total of
+
+229
+00:07:55,259 --> 00:07:59,460
+successes but now it's going to be a lot
+
+230
+00:07:57,419 --> 00:08:00,900
+easier to add a fourth shot we can just
+
+231
+00:07:59,460 --> 00:08:02,460
+continue the pattern of pushing the
+
+232
+00:08:00,900 --> 00:08:04,680
+numbers down the table and combining
+
+233
+00:08:02,460 --> 00:08:06,360
+them so for four shots it looks like
+
+234
+00:08:04,680 --> 00:08:08,759
+there's still just one way to miss them
+
+235
+00:08:06,360 --> 00:08:11,039
+all four ways to make one six ways to
+
+236
+00:08:08,759 --> 00:08:13,380
+make two four ways to make three and one
+
+237
+00:08:11,039 --> 00:08:15,240
+way to make all four and we can just
+
+238
+00:08:13,380 --> 00:08:17,460
+continue this pattern to find any number
+
+239
+00:08:15,240 --> 00:08:19,319
+we need
+
+240
+00:08:17,460 --> 00:08:20,940
+so now we could use the binomial
+
+241
+00:08:19,319 --> 00:08:22,440
+distribution formula to answer this
+
+242
+00:08:20,940 --> 00:08:25,020
+question from the very beginning of the
+
+243
+00:08:22,440 --> 00:08:26,400
+video what is the probability a sixty
+
+244
+00:08:25,020 --> 00:08:28,500
+percent free throw shooter will make
+
+245
+00:08:26,400 --> 00:08:31,199
+seven of ten we can look at this table
+
+246
+00:08:28,500 --> 00:08:32,880
+to see that there are 120 ways to make 7
+
+247
+00:08:31,199 --> 00:08:34,740
+out of 10 shots
+
+248
+00:08:32,880 --> 00:08:37,260
+and the probability for each of those
+
+249
+00:08:34,740 --> 00:08:40,080
+ways happening is 0.6 to the seventh
+
+250
+00:08:37,260 --> 00:08:41,580
+power for the seven makes times 0.4 to
+
+251
+00:08:40,080 --> 00:08:43,740
+the third power for the three misses
+
+252
+00:08:41,580 --> 00:08:45,959
+that comes out to a pretty small number
+
+253
+00:08:43,740 --> 00:08:48,240
+but if you combine all 120 different
+
+254
+00:08:45,959 --> 00:08:52,320
+ways to make seven they add up to about
+
+255
+00:08:48,240 --> 00:08:54,300
+21.5 percent so that's our answer
+
+256
+00:08:52,320 --> 00:08:56,160
+this pattern is known as Pascal's
+
+257
+00:08:54,300 --> 00:08:58,320
+triangle it's usually written like this
+
+258
+00:08:56,160 --> 00:09:00,360
+the numbers on the outside of each row
+
+259
+00:08:58,320 --> 00:09:02,100
+are one and each number in the middle is
+
+260
+00:09:00,360 --> 00:09:04,260
+found by adding the two numbers above it
+
+261
+00:09:02,100 --> 00:09:06,839
+so we now have a way to get this
+
+262
+00:09:04,260 --> 00:09:09,060
+binomial coefficient for any numbers but
+
+263
+00:09:06,839 --> 00:09:10,980
+it's still a lot of work especially if
+
+264
+00:09:09,060 --> 00:09:13,260
+the numbers are big so it would be nice
+
+265
+00:09:10,980 --> 00:09:15,480
+if there were a faster way to do it
+
+266
+00:09:13,260 --> 00:09:17,940
+the good news is there's a formula for
+
+267
+00:09:15,480 --> 00:09:19,680
+the binomial coefficient the bad news is
+
+268
+00:09:17,940 --> 00:09:21,480
+it looks like this
+
+269
+00:09:19,680 --> 00:09:23,339
+those exclamation points are called
+
+270
+00:09:21,480 --> 00:09:25,080
+factorials if you haven't seen them
+
+271
+00:09:23,339 --> 00:09:27,959
+before I think it's easiest to explain
+
+272
+00:09:25,080 --> 00:09:30,839
+them with examples one factorial is one
+
+273
+00:09:27,959 --> 00:09:33,180
+two factorial is two times one three
+
+274
+00:09:30,839 --> 00:09:35,580
+factorial is three times two times one
+
+275
+00:09:33,180 --> 00:09:38,399
+and four factorial is say it with me
+
+276
+00:09:35,580 --> 00:09:40,080
+four times three times two times one you
+
+277
+00:09:38,399 --> 00:09:42,660
+multiply the number by one less than
+
+278
+00:09:40,080 --> 00:09:44,760
+itself then by two less and so on all
+
+279
+00:09:42,660 --> 00:09:46,620
+the way down to one so to say this
+
+280
+00:09:44,760 --> 00:09:48,779
+formula in words we take the factorial
+
+281
+00:09:46,620 --> 00:09:50,700
+of the total number of shots and then we
+
+282
+00:09:48,779 --> 00:09:52,860
+divide by the factorial of the number of
+
+283
+00:09:50,700 --> 00:09:55,019
+makes and we also divide by the
+
+284
+00:09:52,860 --> 00:09:57,600
+factorial of the number of Misses which
+
+285
+00:09:55,019 --> 00:09:59,640
+reminds me zero factorial is defined as
+
+286
+00:09:57,600 --> 00:10:01,620
+one that can feel a bit weird at first
+
+287
+00:09:59,640 --> 00:10:02,940
+so I'll link to some videos about it but
+
+288
+00:10:01,620 --> 00:10:04,860
+I figured I should mention it because
+
+289
+00:10:02,940 --> 00:10:06,899
+it's required for this formula to work
+
+290
+00:10:04,860 --> 00:10:09,240
+when we have 0 makes or zero misses
+
+291
+00:10:06,899 --> 00:10:10,980
+anyway with this formula we can find the
+
+292
+00:10:09,240 --> 00:10:13,140
+binomial coefficient without having to
+
+293
+00:10:10,980 --> 00:10:15,300
+look at Pascal's triangle but it's
+
+294
+00:10:13,140 --> 00:10:17,459
+probably not super clear yet why this
+
+295
+00:10:15,300 --> 00:10:19,019
+formula Works to make sense of it let's
+
+296
+00:10:17,459 --> 00:10:21,060
+zoom out a bit and think about counting
+
+297
+00:10:19,019 --> 00:10:23,459
+Arrangements in General we'll start out
+
+298
+00:10:21,060 --> 00:10:26,880
+with one object how many ways are there
+
+299
+00:10:23,459 --> 00:10:28,800
+to arrange this one object there's just
+
+300
+00:10:26,880 --> 00:10:30,600
+one I guess there it is
+
+301
+00:10:28,800 --> 00:10:32,279
+if we had a second object we can do it
+
+302
+00:10:30,600 --> 00:10:35,339
+in one of two weights we can put it to
+
+303
+00:10:32,279 --> 00:10:37,080
+the left or to the right so by adding a
+
+304
+00:10:35,339 --> 00:10:39,360
+second object we multiply the number of
+
+305
+00:10:37,080 --> 00:10:41,339
+possible Arrangements by two
+
+306
+00:10:39,360 --> 00:10:43,440
+to add a third object we can take the
+
+307
+00:10:41,339 --> 00:10:44,880
+previous orderings one at a time and add
+
+308
+00:10:43,440 --> 00:10:48,120
+the new objects to three different
+
+309
+00:10:44,880 --> 00:10:49,920
+places left middle or right so by adding
+
+310
+00:10:48,120 --> 00:10:52,019
+a third object we multiply the number of
+
+311
+00:10:49,920 --> 00:10:53,640
+possible Arrangements by three you might
+
+312
+00:10:52,019 --> 00:10:55,740
+be starting to see a pattern but let's
+
+313
+00:10:53,640 --> 00:10:57,959
+do one more if we add a fourth object
+
+314
+00:10:55,740 --> 00:10:59,820
+there are four places we can put it so
+
+315
+00:10:57,959 --> 00:11:01,560
+by adding a fourth object we multiply
+
+316
+00:10:59,820 --> 00:11:04,200
+the number of possible Arrangements by
+
+317
+00:11:01,560 --> 00:11:05,579
+four the number of possible Arrangements
+
+318
+00:11:04,200 --> 00:11:07,320
+is already starting to get out of hand
+
+319
+00:11:05,579 --> 00:11:09,000
+but thankfully we can see the pattern
+
+320
+00:11:07,320 --> 00:11:10,800
+now and don't have to list them all out
+
+321
+00:11:09,000 --> 00:11:12,720
+anymore if you want to arrange any
+
+322
+00:11:10,800 --> 00:11:14,700
+unique objects there are n factorial
+
+323
+00:11:12,720 --> 00:11:16,260
+ways to do it and that's where the N
+
+324
+00:11:14,700 --> 00:11:18,420
+factorial in the numerator of this
+
+325
+00:11:16,260 --> 00:11:20,640
+formula comes from now is a good time to
+
+326
+00:11:18,420 --> 00:11:22,500
+pause and make sure that n factorial in
+
+327
+00:11:20,640 --> 00:11:24,360
+the numerator make sense if it doesn't
+
+328
+00:11:22,500 --> 00:11:26,220
+the part that comes next certainly won't
+
+329
+00:11:24,360 --> 00:11:27,720
+either all that's left is to figure out
+
+330
+00:11:26,220 --> 00:11:29,459
+the factorials in the bottom of the
+
+331
+00:11:27,720 --> 00:11:30,959
+formula these let us account for
+
+332
+00:11:29,459 --> 00:11:32,640
+situations where the objects aren't
+
+333
+00:11:30,959 --> 00:11:34,440
+unique but instead fall into two
+
+334
+00:11:32,640 --> 00:11:36,420
+different categories like makes and
+
+335
+00:11:34,440 --> 00:11:37,980
+misses remember that's what binomial
+
+336
+00:11:36,420 --> 00:11:39,899
+means we're going to look at some
+
+337
+00:11:37,980 --> 00:11:41,760
+examples to help this make sense but the
+
+338
+00:11:39,899 --> 00:11:43,019
+quick explanation is that since we don't
+
+339
+00:11:41,760 --> 00:11:44,940
+care about the order of identical
+
+340
+00:11:43,019 --> 00:11:47,040
+objects n factorial is counting
+
+341
+00:11:44,940 --> 00:11:48,540
+orderings we don't care about so we have
+
+342
+00:11:47,040 --> 00:11:51,000
+to divide by the number of ways to
+
+343
+00:11:48,540 --> 00:11:52,800
+arrange the objects in each category so
+
+344
+00:11:51,000 --> 00:11:54,720
+for example let's focus on the situation
+
+345
+00:11:52,800 --> 00:11:56,399
+with three blobs and we'll take the
+
+346
+00:11:54,720 --> 00:11:58,140
+perspective that we only care about
+
+347
+00:11:56,399 --> 00:11:58,800
+whether the blobs are wearing hats or
+
+348
+00:11:58,140 --> 00:12:00,480
+not
+
+349
+00:11:58,800 --> 00:12:03,360
+two of the three blobs are wearing hats
+
+350
+00:12:00,480 --> 00:12:05,339
+so if we just care about hat or no half
+
+351
+00:12:03,360 --> 00:12:06,959
+of the orderings are the same half of
+
+352
+00:12:05,339 --> 00:12:09,120
+them have the wizard hat first and half
+
+353
+00:12:06,959 --> 00:12:10,560
+of them have the propeller hat first so
+
+354
+00:12:09,120 --> 00:12:12,899
+we should divide by the two ways of
+
+355
+00:12:10,560 --> 00:12:14,279
+ordering the two hats or to write it in
+
+356
+00:12:12,899 --> 00:12:16,200
+a way that looks like the binomial
+
+357
+00:12:14,279 --> 00:12:18,060
+coefficient formula we could divide by
+
+358
+00:12:16,200 --> 00:12:20,579
+the two factorial ways to order the two
+
+359
+00:12:18,060 --> 00:12:22,860
+hats and also the one factorial ways to
+
+360
+00:12:20,579 --> 00:12:24,779
+order the one blob with no hat this
+
+361
+00:12:22,860 --> 00:12:26,700
+example has pretty small numbers so the
+
+362
+00:12:24,779 --> 00:12:28,140
+pattern might not be super clear yet so
+
+363
+00:12:26,700 --> 00:12:30,959
+let's run through some examples with
+
+364
+00:12:28,140 --> 00:12:33,060
+four blobs we have four factorial total
+
+365
+00:12:30,959 --> 00:12:34,500
+ways to arrange the blobs but if we're
+
+366
+00:12:33,060 --> 00:12:36,360
+just worried about the hats we'll again
+
+367
+00:12:34,500 --> 00:12:38,339
+divide by the two factorial ways to
+
+368
+00:12:36,360 --> 00:12:39,959
+order the hats but will also divide by
+
+369
+00:12:38,339 --> 00:12:42,180
+the two factorial ways to order the
+
+370
+00:12:39,959 --> 00:12:45,000
+non-hats and this gets us to six
+
+371
+00:12:42,180 --> 00:12:47,279
+orderings of hats and non-hats okay
+
+372
+00:12:45,000 --> 00:12:49,680
+let's do one more example this time with
+
+373
+00:12:47,279 --> 00:12:51,240
+three of the four blobs wearing hats we
+
+374
+00:12:49,680 --> 00:12:53,220
+still have four factorial ways to
+
+375
+00:12:51,240 --> 00:12:55,139
+arrange the blobs and focusing on the
+
+376
+00:12:53,220 --> 00:12:57,000
+hat or not hat orderings we can divide
+
+377
+00:12:55,139 --> 00:12:59,639
+by the three factorial ways to arrange
+
+378
+00:12:57,000 --> 00:13:01,139
+the hats which gets us to four for these
+
+379
+00:12:59,639 --> 00:13:02,760
+examples with small numbers it wouldn't
+
+380
+00:13:01,139 --> 00:13:04,740
+be too hard to just list out all the
+
+381
+00:13:02,760 --> 00:13:06,360
+possibilities and count them but this
+
+382
+00:13:04,740 --> 00:13:08,399
+pattern where we take the factorial of
+
+383
+00:13:06,360 --> 00:13:09,959
+the total number of objects then divide
+
+384
+00:13:08,399 --> 00:13:12,000
+by the factorials of the numbers in each
+
+385
+00:13:09,959 --> 00:13:13,560
+group are focusing on lets us find the
+
+386
+00:13:12,000 --> 00:13:15,779
+binomial coefficient for any numbers
+
+387
+00:13:13,560 --> 00:13:18,180
+imagine trying to do this by hand for
+
+388
+00:13:15,779 --> 00:13:19,800
+the 7 out of 10 example this is just a
+
+389
+00:13:18,180 --> 00:13:21,480
+small taste of the area of math that
+
+390
+00:13:19,800 --> 00:13:22,800
+deals with counting how to group or
+
+391
+00:13:21,480 --> 00:13:24,720
+arrange things which is called
+
+392
+00:13:22,800 --> 00:13:26,100
+combinatorics so that's something you
+
+393
+00:13:24,720 --> 00:13:28,019
+could look up if you're interested in
+
+394
+00:13:26,100 --> 00:13:29,940
+hearing more about this kind of thing
+
+395
+00:13:28,019 --> 00:13:31,500
+so we've done a bunch of theorizing
+
+396
+00:13:29,940 --> 00:13:33,120
+about how this formula should be able to
+
+397
+00:13:31,500 --> 00:13:34,500
+calculate the probabilities of a free
+
+398
+00:13:33,120 --> 00:13:36,720
+throw shooter hitting a certain number
+
+399
+00:13:34,500 --> 00:13:38,279
+of shots before we're satisfied with it
+
+400
+00:13:36,720 --> 00:13:40,019
+though we should check that it works by
+
+401
+00:13:38,279 --> 00:13:42,540
+testing it against some randomized
+
+402
+00:13:40,019 --> 00:13:44,399
+results Let's test it with ten thousand
+
+403
+00:13:42,540 --> 00:13:45,860
+blobs since that's a number that only
+
+404
+00:13:44,399 --> 00:13:48,660
+almost breaks my computer
+
+405
+00:13:45,860 --> 00:13:51,660
+[Music]
+
+406
+00:13:48,660 --> 00:13:51,660
+foreign
+
+407
+00:13:55,520 --> 00:13:58,590
+[Music]
+
+408
+00:14:03,280 --> 00:14:06,400
+[Music]
+
+409
+00:14:11,080 --> 00:14:14,249
+[Music]
+
+410
+00:14:16,350 --> 00:14:19,489
+[Music]
+
+411
+00:14:27,680 --> 00:14:32,399
+it's pretty close it's not exact but we
+
+412
+00:14:30,839 --> 00:14:34,560
+shouldn't expect it to be exact even
+
+413
+00:14:32,399 --> 00:14:36,540
+with 10 000 blobs and we did get this
+
+414
+00:14:34,560 --> 00:14:38,459
+one blob that didn't make a single shot
+
+415
+00:14:36,540 --> 00:14:39,959
+poor little buddy let's let it keep
+
+416
+00:14:38,459 --> 00:14:41,579
+trying while we summarize what we've
+
+417
+00:14:39,959 --> 00:14:43,920
+learned about this formula for
+
+418
+00:14:41,579 --> 00:14:46,260
+repeatable independent events whose
+
+419
+00:14:43,920 --> 00:14:48,360
+results can be categorized as a yes or a
+
+420
+00:14:46,260 --> 00:14:50,279
+no this formula gives the probability
+
+421
+00:14:48,360 --> 00:14:52,139
+that you get a certain number of yeses
+
+422
+00:14:50,279 --> 00:14:54,240
+or no's in a certain number of Trials
+
+423
+00:14:52,139 --> 00:14:56,940
+and of course you need to know the
+
+424
+00:14:54,240 --> 00:14:59,160
+probability of an individual yes or no
+
+425
+00:14:56,940 --> 00:15:00,720
+a lot of work goes into these videos and
+
+426
+00:14:59,160 --> 00:15:02,579
+we're committed to providing them for
+
+427
+00:15:00,720 --> 00:15:04,440
+free if you happen to be in a position
+
+428
+00:15:02,579 --> 00:15:05,880
+where you're able to give you can help
+
+429
+00:15:04,440 --> 00:15:07,980
+us produce more of these videos by
+
+430
+00:15:05,880 --> 00:15:10,019
+supporting on patreon but even if you're
+
+431
+00:15:07,980 --> 00:15:11,519
+not able to provide financial support we
+
+432
+00:15:10,019 --> 00:15:13,320
+appreciate very much that you watched
+
+433
+00:15:11,519 --> 00:15:15,480
+all the way to the end and we'll see you
+
+434
+00:15:13,320 --> 00:15:18,480
+next time
+
+435
+00:15:15,480 --> 00:15:18,480
+foreign
