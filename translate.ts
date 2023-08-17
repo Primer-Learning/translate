@@ -1,13 +1,14 @@
 #!/usr/bin/env deno run --allow-net=api.openai.com --allow-write --allow-read --allow-env
+import { getEnvironmentVarible, read, write } from './utils.ts';
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const OPENAI_API_KEY = getEnvironmentVarible('OPENAI_API_KEY');
 const REDUNDANCY = 10;
 const LINES_PER_REQUEST = 100;
 
 traslateSrtFile('captions.srt');
 
 async function traslateSrtFile(filename: string) {
-  const content = await Deno.readTextFile(filename);
+  const content = await read(filename);
   const lines = parseSrtFile(content);
   const result = [] as string[];
 
@@ -26,10 +27,6 @@ async function traslateSrtFile(filename: string) {
 
   write('output.json', result);
   console.log(result);
-}
-
-function write(filename: string, content: any) {
-  Deno.writeTextFile(filename, JSON.stringify(content, null, 2));
 }
 
 function parseSrtFile(content: string) {
