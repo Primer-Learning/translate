@@ -1,7 +1,8 @@
 #!/usr/bin/env deno run --allow-net=api.openai.com --allow-write --allow-read --allow-env
-import { getEnvironmentVarible, read, write } from './utils.ts';
 
-const OPENAI_API_KEY = getEnvironmentVarible('OPENAI_API_KEY');
+import { gpt } from './gpt.ts';
+import { read, write } from './utils.ts';
+
 const REDUNDANCY = 10;
 const LINES_PER_REQUEST = 100;
 
@@ -30,16 +31,25 @@ async function traslateSrtFile(filename: string) {
 }
 
 function parseSrtFile(content: string) {
-  return content
-    .split(/\n/)
-    .map((x) => x.trim())
-    .filter((x) => !/^\d+$/.test(x))
-    .filter((x) => !x.includes('-->'))
-    .filter(Boolean);
+  return (
+    content
+      .split(/\n/)
+      // remove whitespace at start and end of lines
+      .map((x) => x.trim())
+      // remove lines that only contain digits
+      .filter((x) => !/^\d+$/.test(x))
+      // remove lines that contain '-->' (timestamp lines)
+      .filter((x) => !x.includes('-->'))
+      // remove empty lines
+      //   this means "convert the strings to booleans and filter out the false ones"
+      //   is the same as .filter(line => Boolean(line)) or .filter(line => !!line)
+      .filter(Boolean)
+  );
 }
 
 async function translate(text: string, lang = 'Spanish') {
-  const response = await askGPT4(
+  const response = await gpt(
+    'gpt-4',
     {
       role: 'system',
       content: `
@@ -56,53 +66,4 @@ Keep the line breaks, the result should have exactly as many lines as the input.
   );
 
   return response.choices[0].message.content;
-}
-
-async function askGPT4(
-  ...messages: Message[]
-): Promise<ChatCompletionResponse> {
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: 'gpt-4',
-      messages,
-    }),
-  });
-
-  return response.json();
-}
-
-// Types
-
-interface Message {
-  role: 'user' | 'system' | 'assistant';
-  content: string;
-}
-
-interface ChatCompletionRequest {
-  model: string;
-  messages: Message[];
-}
-
-interface ChatCompletionResponse {
-  choices: Choice[];
-  created: number;
-  id: string;
-  model: string;
-  object: string;
-  usage: {
-    completion_tokens: number;
-    prompt_tokens: number;
-    total_tokens: number;
-  };
-}
-
-interface Choice {
-  finish_reason: 'stop';
-  index: number;
-  message: Message;
 }
