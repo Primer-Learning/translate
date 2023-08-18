@@ -1,6 +1,6 @@
 #!/usr/bin/env deno run --allow-net=www.googleapis.com --allow-write --allow-read --allow-env
 
-import { RS256, create as createJwt } from 'https://deno.land/x/djwt/mod.ts';
+import { create as createJwt } from 'https://deno.land/x/djwt/mod.ts';
 import { getEnvironmentVarible, read } from './utils.ts';
 
 const API_KEY = getEnvironmentVarible('YOUTUBE_API_KEY');
@@ -17,7 +17,7 @@ const jwt = await createJwt(
     exp: Date.now() / 1000 + 3600,
     iat: Date.now() / 1000,
   },
-  new RS256(credentials.private_key)
+  credentials.private_key
 );
 
 const response = await fetch('https://oauth2.googleapis.com/token', {
